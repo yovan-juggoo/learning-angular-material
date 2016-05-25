@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Horizontal Usage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div ng-controller="AppCtrl as ctrl" ng-cloak="" class="virtualRepeatdemoHorizontalUsage" ng-app="MyApp">
+  <md-content layout="column">
+    <p>
+       Display 1000 item in a virtual-list with viewport of only 16 columns (width=50px).
+       <br><br>
+       This demo shows scroll and rendering performance gains when using <code>md-virtual-repeat</code>;
+       achieved with the dynamic reuse of rows visible in the viewport area. Developers are required to
+       explicitly use <code>md-virtual-repeat-container</code> as a wrapping parent container.
+    </p>
+
+    <md-virtual-repeat-container id="horizontal-container" md-orient-horizontal="">
+      <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
+        {{item}}
+      </div>
+    </md-virtual-repeat-container>
+  </md-content>
+
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

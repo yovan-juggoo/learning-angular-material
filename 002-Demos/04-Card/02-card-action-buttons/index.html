@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Card Action Buttons</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div ng-controller="AppCtrl" ng-cloak="" class="carddemoCardActionButtons" ng-app="MyApp">
+  <md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs="" flex-gt-xs="50" layout="column">
+      <md-card>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Action buttons</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Vertical action buttons</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+        <md-card-actions layout="column" layout-align="start">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    <div flex-xs="" flex-gt-xs="50" layout="column">
+      <md-card>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Icon action buttons</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+
+      <md-card>
+        <md-card-header>
+          <md-card-avatar>
+            <img src="img/logo.svg">
+          </md-card-avatar>
+          <md-card-header-text>
+            <span class="md-title">Angular</span>
+            <span class="md-subhead">Material</span>
+          </md-card-header-text>
+        </md-card-header>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card header</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+      </md-card>
+
+    </div>
+  </md-content>
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

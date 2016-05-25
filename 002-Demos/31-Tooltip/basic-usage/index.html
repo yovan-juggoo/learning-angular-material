@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic Usage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div ng-controller="AppCtrl" ng-cloak="" class="tooltipdemoBasicUsage" ng-app="MyApp">
+
+  <md-toolbar class="md-accent">
+    <h2 class="md-toolbar-tools">
+      <span flex="">Awesome Md App</span>
+      <md-button class="md-fab md-accent" aria-label="refresh">
+        <md-tooltip md-direction="left">
+          Refresh
+        </md-tooltip>
+        <md-icon md-svg-src="img/icons/ic_refresh_24px.svg" style="width: 24px; height: 24px;">
+        </md-icon>
+      </md-button>
+    </h2>
+  </md-toolbar>
+  <md-content layout-padding="" style="margin-left: 20px; margin-right: 20px">
+
+    <p>
+      The tooltip is visible when the button is hovered, focused, or touched.
+    </p>
+
+    <md-button class="md-fab md-fab-top-left left" aria-label="Insert Drive">
+      <md-icon md-svg-src="img/icons/ic_insert_drive_file_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+      <md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
+        Insert Drive
+      </md-tooltip>
+    </md-button>
+    <md-button class="md-fab md-fab-top-right right" aria-label="Photos">
+      <md-icon md-svg-src="img/icons/ic_photo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+      <md-tooltip>
+        Photos
+      </md-tooltip>
+    </md-button>
+
+
+    <div style="margin-top: 150px;">
+      <p>
+        Additionally, the Tooltip's <code>md-visible</code> attribute can use data-binding to
+        programmatically show/hide itself. Toggle the checkbox below...
+      </p>
+      <div style="padding-left: 37px">
+        <md-checkbox ng-model="demo.showTooltip" style="padding-left:30px;">
+          Insert Drive
+        </md-checkbox>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px;margin-bottom: -5px">
+      <p><code>md-direction</code> attribute can used to dynamically change the direction of the tooltip.<br>
+      Note: the direction default value is 'bottom'. </p>
+      <div style="padding-left: 30px">
+      <md-radio-group ng-model="demo.tipDirection">
+         <md-radio-button value="left"> Left </md-radio-button>
+         <md-radio-button value="top">Top</md-radio-button>
+         <md-radio-button value="bottom" class="md-primary">Bottom</md-radio-button>
+         <md-radio-button value="right">Right</md-radio-button>
+       </md-radio-group>
+      </div>
+    </div>
+
+
+  </md-content>
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

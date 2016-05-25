@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic Usage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div ng-controller="AppCtrl" layout-fill="" layout="column" class="inset toastdemoBasicUsage" ng-cloak="" ng-app="MyApp">
+    <p>
+    Toast can be dismissed with a swipe, a timer, or a button.<br>
+      <span style="font-size:0.8em">Notice the 'Show Custom' toast will not nudge the FABs positions since a custom parent was specified.</span>
+    </p>
+
+
+    <div layout="row" layout-sm="column" layout-align="space-around">
+      <div style="width:50px"></div>
+      <md-button ng-click="showSimpleToast()">
+        Show Simple
+      </md-button>
+      <md-button class="md-raised" ng-click="showActionToast()">
+        Show With Action
+      </md-button>
+      <md-button ng-click="showCustomToast()">
+        Show Custom
+      </md-button>
+      <div style="width:50px"></div>
+    </div>
+
+    <div layout="row" id="toastBounds">
+
+      <div>
+        <br>
+        <b>Toast Position: "{{getToastPosition()}}"</b>
+        <br>
+        <md-checkbox ng-repeat="(name, isSelected) in toastPosition" ng-model="toastPosition[name]">
+          {{name}}
+        </md-checkbox>
+      </div>
+    </div>
+    <div layout="row">
+      <md-button class="md-primary md-fab md-fab-bottom-right">
+        FAB
+      </md-button>
+      <md-button class="md-accent md-fab md-fab-top-right">
+        FAB
+      </md-button>
+
+    </div>
+<script type="text/ng-template" id="toast-template.html"><md-toast>
+  <span flex>Custom toast!</span>
+  <md-button ng-click="closeToast()">
+    Close
+  </md-button>
+</md-toast>
+</script></div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

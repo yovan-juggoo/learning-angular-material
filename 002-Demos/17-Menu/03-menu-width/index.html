@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Menu Width</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="md-menu-demo menudemoMenuWidth" ng-controller="WidthDemoCtrl as ctrl" style="min-height:350px" ng-cloak="" ng-app="MyApp">
+  <div class="menu-demo-container" layout-align="start center" layout="column">
+    <div layout-align="start center" layout="column" style="min-height:70px;">
+    <h2 class="md-title">Different Widths</h2>
+    <p><code>md-menu-content</code> may specify a <code>width</code> attribute which will follow the <a href="http://www.google.com/design/spec/components/menus.html#menus-specs">official spec</a>.</p>
+    </div>
+    <div class="menus" layout-wrap="" layout="row" layout-fill="" layout-align="space-between center" style="min-height:100px;">
+      <div layout="column" flex="33" flex-sm="100" layout-align="center center">
+        <p>Wide menu (<code>width=6</code>)</p>
+        <md-menu md-offset="0 -7">
+          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon md-menu-origin="" md-svg-icon="call:phone"></md-icon>
+          </md-button>
+          <md-menu-content width="6">
+            <md-menu-item ng-repeat="item in [1, 2, 3]">
+              <md-button ng-click="ctrl.announceClick($index)"> <span md-menu-align-target="">Option</span> {{item}} </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+      <div layout="column" flex-sm="100" flex="33" layout-align="center center">
+        <p>Medium menu (<code>width=4</code>)</p>
+        <md-menu md-offset="0 -7">
+          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon md-menu-origin="" md-svg-icon="call:email"></md-icon>
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item ng-repeat="item in [1, 2, 3]">
+              <md-button ng-click="ctrl.announceClick($index)"> <span md-menu-align-target="">Option</span> {{item}} </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+      <div layout="column" flex="33" flex-sm="100" layout-align="center center">
+        <p>Small menu (<code>width=2</code>)</p>
+        <md-menu md-offset="0 -7">
+          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon md-menu-origin="" md-svg-icon="call:chat"></md-icon>
+          </md-button>
+          <md-menu-content width="2">
+            <md-menu-item ng-repeat="item in [1, 2, 3]">
+              <md-button ng-click="ctrl.announceClick($index)"> <span md-menu-align-target="">Option</span> {{item}} </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

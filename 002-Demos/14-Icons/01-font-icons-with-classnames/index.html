@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Font Icons With Classnames</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div ng-controller="DemoCtrl" ng-cloak="" class="icondemoFontIconsWithClassnames" ng-app="MyApp">
+  <p>Display 5 font-icons, each with different sizes and colors</p>
+  <!-- Display font icons from Icomoon.io: -->
+  <div class="glyph" ng-repeat="font in fonts" layout="row">
+    <div ng-repeat="it in sizes" flex="" layout-align="center center" style="text-align: center;" layout="column">
+      <div flex=""></div>
+      <div class="preview-glyphs">
+        <md-icon md-font-icon="{{ font.name }}" ng-style="{color: !font.theme && font.color, 'font-size': it.size + 'px', height: it.size + 'px'}" ng-class="font.theme" aria-label="{{ font.name + it.size }}" class="step "></md-icon>
+      </div>
+      <div class="preview-scale">
+        <span class="step" style="padding-left:{{ it.padding }}px">{{ it.size }}px</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- For this demo, include the font-faces needed by mdIcon above -->
+  <style>
+    @font-face {
+      font-family:"icomoon";
+      src:url("https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot");
+      font-weight:normal;
+      font-style:normal;
+    }
+
+    @font-face {
+      font-family: 'icomoon';
+      src:url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?-cmq1um');
+      src:url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?#iefix-cmq1um') format('embedded-opentype'),
+      url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.woff?-cmq1um') format('woff'),
+      url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.ttf?-cmq1um') format('truetype'),
+      url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.svg?-cmq1um#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

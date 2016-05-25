@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Errors</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div ng-controller="AppCtrl" layout="column" ng-cloak="" class="inputdemoErrors" ng-app="MyApp">
+
+  <md-content layout-padding="">
+    <form name="projectForm">
+
+      <md-input-container class="md-block">
+        <label>Description</label>
+        <input md-maxlength="30" required="" md-no-asterisk="" name="description" ng-model="project.description">
+        <div ng-messages="projectForm.description.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Client Name</label>
+        <input required="" name="clientName" ng-model="project.clientName">
+        <div ng-messages="projectForm.clientName.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Client Email</label>
+        <input required="" type="email" name="clientEmail" ng-model="project.clientEmail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/">
+
+        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+            Your email must be between 10 and 100 characters long and look like an e-mail address.
+          </div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Hourly Rate (USD)</label>
+        <input required="" type="number" step="any" name="rate" ng-model="project.rate" min="800" max="4999" ng-pattern="/^1234$/">
+
+        <div ng-messages="projectForm.rate.$error" multiple="" md-auto-hide="false">
+          <div ng-message="required">
+            You've got to charge something! You can't just <b>give away</b> a Missile Defense
+            System.
+          </div>
+
+          <div ng-message="min">
+            You should charge at least $800 an hour. This job is a big deal... if you mess up,
+            everyone dies!
+          </div>
+
+          <div ng-message="pattern">
+            You should charge exactly $1,234.
+          </div>
+
+          <div ng-message="max">
+            {{projectForm.rate.$viewValue | currency:"$":0}} an hour? That's a little ridiculous. I
+            doubt even Bill Clinton could afford that.
+          </div>
+        </div>
+      </md-input-container>
+
+      <p style="font-size:.8em; width: 100%; text-align: center;">
+        Make sure to include <a href="https://docs.angularjs.org/api/ngMessages" target="_blank">ngMessages</a> module when using ng-message markup.
+      </p>
+    </form>
+  </md-content>
+
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

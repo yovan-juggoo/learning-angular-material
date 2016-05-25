@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic Usage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="radioButtondemoBasicUsage" ng-app="MyApp">
+  <form ng-submit="submit()" ng-controller="AppCtrl" ng-cloak="">
+    <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span> </p>
+
+    <md-radio-group ng-model="data.group1">
+
+      <md-radio-button value="Apple" class="md-primary">Apple</md-radio-button>
+      <md-radio-button value="Banana"> Banana </md-radio-button>
+      <md-radio-button value="Mango">Mango</md-radio-button>
+
+    </md-radio-group>
+
+    <hr>
+
+    <p>Selected Value: <span class="radioValue">{{ data.group2 }}</span></p>
+
+    <md-radio-group ng-model="data.group2" class="md-primary">
+
+        <md-radio-button ng-repeat="d in radioData" ng-value="d.value" ng-disabled=" d.isDisabled " ng-class="{'md-align-top-left': $index==1}">
+            {{ d.label }}<br>
+          <span class="ipsum" ng-if="$index == 1">
+            Duis placerat lectus et justo mollis, nec sodales orci congue. Vestibulum semper non urna ac suscipit.
+            Vestibulum tempor, ligula id laoreet hendrerit, massa augue iaculis magna,
+            sit amet dapibus tortor ligula non nibh.
+          </span>
+
+        </md-radio-button>
+
+    </md-radio-group>
+
+    <p>
+      <md-button class="md-raised" ng-click="addItem()" type="button">Add</md-button>
+      <md-button class="md-raised" ng-click="removeItem()" type="button">Remove</md-button>
+    </p>
+
+    <hr>
+
+    <p style="margin-bottom: 0;">Graphic radio buttons need to be labeled with the <code>aria-label</code> attribute.</p>
+    <p style="margin-top: 0;">Selected Avatar: <span class="radioValue">{{ data.group3 }}</span></p>
+
+    <md-radio-group ng-model="data.group3">
+      <md-radio-button ng-repeat="it in avatarData" ng-value="it.value" aria-label="{{it.title}}">
+          <md-icon md-svg-icon="{{it.id}}"></md-icon>
+      </md-radio-button>
+    </md-radio-group>
+  </form>
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

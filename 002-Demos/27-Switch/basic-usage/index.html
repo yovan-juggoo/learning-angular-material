@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic Usage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="inset switchdemoBasicUsage" ng-controller="SwitchDemoCtrl" ng-cloak="" ng-app="MyApp">
+  <md-switch ng-model="data.cb1" aria-label="Switch 1">
+    Switch 1: {{ data.cb1 }}
+  </md-switch>
+
+  <md-switch ng-model="data.cb2" aria-label="Switch 2" ng-true-value="'yup'" ng-false-value="'nope'" class="md-warn">
+    Switch 2 (md-warn): {{ data.cb2 }}
+  </md-switch>
+
+  <md-switch ng-disabled="true" aria-label="Disabled switch" ng-model="disabledModel">
+    Switch (Disabled)
+  </md-switch>
+
+  <md-switch ng-disabled="true" aria-label="Disabled active switch" ng-model="data.cb4">
+    Switch (Disabled, Active)
+  </md-switch>
+
+  <md-switch class="md-primary" md-no-ink="" aria-label="Switch No Ink" ng-model="data.cb5">
+    Switch (md-primary): No Ink
+  </md-switch>
+
+  <md-switch ng-model="data.cb6" aria-label="Switch 6" ng-change="onChange(data.cb6)">
+    Switch 6 message: {{ message }}
+  </md-switch>
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
