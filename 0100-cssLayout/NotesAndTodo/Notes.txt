@@ -1,0 +1,93 @@
+1. The display property
+==========================
+Every element has a default display value depending on what type of element it is.
+The default for most elements is usually block or inline.
+Inline elements can be used inside block level elements and they don't disrupt the flow of text.
+
+Example of block-level elements: p, div, form, header, footer, section, ...
+Example of inline elements: span, a
+
+common values for the display property:
+- block
+- inline
+- none
+- list-item
+- table
+- inline-block
+- flex
+
+display: none; will render the page as if the element does not exist.
+visibility: hidden; will hide the element, but the element will still take up the space.
+
+2. margin: auto; and max-width
+==============================
+margin: 100px auto 0px auto;
+
+#main {
+    width: 600px;
+    margin: 0 auto;
+}
+
+We fix the width and set the right and left to auto to center the container.
+Fixing the width will make the browser put a horizontal scrollbar if the width of the container is greater than the width of the browser.
+
+=> Not effective on mobile device. We use max-width => no horizontak scrollbar
+
+#main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+3. box-model
+==============
+Note: Width is the width of the content, not of the container.
+This simply shows that additional space is taken by the box-model (border + padding + width)
+ To see the difference:
+
+p.simple {
+    width: 500px;
+    margin: 20px auto;
+    color: green;
+    border: 1px solid red;
+}
+
+p.fancy {
+    width: 500px;
+    margin: 20px auto;
+    padding: 100px;
+    color: blue;
+    border: 10px solid red;
+}
+
+This requires some maths to calculate and is unintuitive.
+
+
+4. box-sizing: border-box
+=========================
+This ensures that the padding and border of the element no longer increase the box overall width.
+No calculation required.
+
+.simple {
+    width: 500px;
+    margin: 20px auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fancy {
+    width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+    border: solid blue 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+Web designers use it on all their pages:
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
