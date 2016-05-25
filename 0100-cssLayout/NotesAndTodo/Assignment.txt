@@ -1,0 +1,1 @@
+http://stackoverflow.com/questions/10056583/fixed-header-footer-and-sidebars-with-scrolling-content-area-in-center
