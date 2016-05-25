@@ -1,3 +1,5 @@
+From website: http://learnlayout.com/
+
 1. The display property
 ==========================
 Every element has a default display value depending on what type of element it is.
@@ -18,6 +20,8 @@ common values for the display property:
 
 display: none; will render the page as if the element does not exist.
 visibility: hidden; will hide the element, but the element will still take up the space.
+
+Common usage of converting block-level element to inline - li for horizontal menus.  
 
 2. margin: auto; and max-width
 ==============================
@@ -91,3 +95,66 @@ Web designers use it on all their pages:
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+5. Positioning
+===============
+a. static
+----------
+.static {
+    position: static
+}
+
+- Static is the default value for the position property of an element.
+- An element with position: static; is not positioned in any special way.
+- A static element is said to be not positioned and an element with its position set to anything else is said to be positioned.
+
+b. relative
+-------------
+- Relative behaves the same as static unless you add some extra properties.
+- Setting the top, right, bottom and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.
+- Other content will not be adjusted to fit into any gap left by the element
+
+.relative1 {
+    position: relative;
+}
+.relative2 {
+    position: relative;
+    top: -20px;
+    left: 20px;
+    background-color: white;
+    width: 500px;
+}
+
+c. fixed
+---------
+- A fixed element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
+- As with relative, the top, right, bottom, and left properties are used.
+- A fixed element does not leave a gap in the page where it would normally have been located. 
+
+.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: white;
+}
+
+d. absolute
+------------
+- absolute behaves like fixed except relative to the nearest positioned ancestor instead of relative to the viewport.
+- If an absolutely positioned element has no positioned ancestors (i.e  no ancestor has a position property or ancestor has a static position), 
+it uses the document body and still moves along with the page scrolling - static mean that the element is not positioned.
+
+.relative {
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+.absolute {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 300px;
+    height: 200px;
+}
+
