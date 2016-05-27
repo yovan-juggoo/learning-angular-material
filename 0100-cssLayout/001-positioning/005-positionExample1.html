@@ -6,12 +6,23 @@
     <title>Position Example</title>
     <style>
         header {
-            text-align: center;
+            position: fixed;
+            background-color: black;
+            color: yellow;
+            width: 100%;
+            z-index: 1;
+            top:0px;
+            right: 0px;
+            left: 0px;
         }
         
         header li {
             list-style: none;
             display: inline;
+        }
+        
+        header li  a {
+            color: yellow;
         }
         
         header li + li:before {
@@ -21,6 +32,7 @@
         
         .container {
             position: relative;
+            top: 100px;
         }
         
         nav {
@@ -31,7 +43,7 @@
         
         section {
             /* position is static by default */
-            margin-left: 200px;
+            margin-left: 150px;
         }
         
         footer {
@@ -45,7 +57,7 @@
         }
         
         body {
-            margin-bottom: 120px;
+            margin-bottom: 200px;
         }
     </style>
 </head>

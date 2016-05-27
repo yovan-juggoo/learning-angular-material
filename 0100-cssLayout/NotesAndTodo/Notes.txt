@@ -96,7 +96,7 @@ Web designers use it on all their pages:
     box-sizing: border-box;
 }
 
-5. Positioning
+5.0 Positioning
 ===============
 a. static
 ----------
@@ -158,3 +158,8 @@ it uses the document body and still moves along with the page scrolling - static
     height: 200px;
 }
 
+
+5.1 Positioning Example 1
+==========================
+- The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and static elements would overlap.
+- This example works because the container is taller than the nav. If it wasn't, the nav would overflow outside of its container.
