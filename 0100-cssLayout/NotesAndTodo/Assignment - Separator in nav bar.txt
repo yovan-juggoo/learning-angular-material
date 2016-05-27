@@ -1,0 +1,4 @@
+http://stackoverflow.com/questions/10056583/fixed-header-footer-and-sidebars-with-scrolling-content-area-in-center
+http://stackoverflow.com/questions/9171699/add-a-pipe-separator-after-items-in-an-unordered-list-unless-that-item-is-the-la
+https://www.jackreichert.com/2011/07/how-to-add-a-divider-between-menu-items-in-css-using-only-one-selector/
+http://stackoverflow.com/questions/1936661/vertical-dividers-on-horizontal-ul-menu
