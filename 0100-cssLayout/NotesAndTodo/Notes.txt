@@ -163,3 +163,47 @@ it uses the document body and still moves along with the page scrolling - static
 ==========================
 - The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and static elements would overlap.
 - This example works because the container is taller than the nav. If it wasn't, the nav would overflow outside of its container.
+
+6.1 - float and clear
+=======================
+6.2 - Overflowing container
+============================
+6.3 - using clear fix
+=======================
+6.4 - Navigation example using float
+=====================================
+6.5 - Percentage width - responsive image
+==========================================
+6.6 - Percentage width - responsive image using max- and min-width
+===================================================================
+6.7 - Percentage width - navigation example 
+============================================
+
+
+6.8 - Media queries
+====================
+@media screen and (min-width:600px) {
+    nav {
+            float: left;
+            width: 25%;
+        }
+    section {
+                margin-left: 25%;
+            }
+}
+
+@media screen and (max-width:599px) {
+    nav li {
+                display: inline;
+            }
+}
+
+This ensures that the menu is inline on smaller screens.
+
+
+
+7.1 Grid layout with floats
+=============================
+ - We give a width and a height to our elements
+ - Use overflow auto to put a scroll bar if height is not sufficient
+ 

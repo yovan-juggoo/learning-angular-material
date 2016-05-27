@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation using float and percentage</title>
+    <style>
+        #main-info {
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        nav {
+            float: left;
+            min-width: 20%;
+        }
+        
+        .container {
+            overflow: auto;
+            border: 1px solid green;
+        }
+        
+        section {
+            margin-left: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Taco Menu</a></li>
+                <li><a href="#">Draft List</a></li>
+                <li><a href="#">Hours</a></li>
+                <li><a href="#">Directions</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <p id="main-info">When this layout is too narrow, the nav gets squished. Worse, you can't use min-width on the nav to fix it, because the right column wouldn't respect it.</p>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ea molestias recusandae, praesentium rem aliquid perspiciatis commodi odit, autem minus iure eveniet facere fugiat est nisi ad inventore culpa numquam. Sapiente corporis, perferendis voluptatum molestias unde, ducimus distinctio beatae autem pariatur totam accusamus repellat consequuntur incidunt quidem blanditiis debitis. Ullam, necessitatibus, illum! Culpa, veniam. Sed, enim magnam aspernatur, laudantium, sit dicta officia harum nihil natus aliquid fugiat a neque. Quibusdam aspernatur, eligendi ipsum dolorem harum! Voluptas veritatis tempore at! Vitae reiciendis consequuntur alias, mollitia dolorum iure at autem cupiditate obcaecati saepe quos eos? Id omnis fuga ducimus, molestias optio asperiores.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ea molestias recusandae, praesentium rem aliquid perspiciatis commodi odit, autem minus iure eveniet facere fugiat est nisi ad inventore culpa numquam. Sapiente corporis, perferendis voluptatum molestias unde, ducimus distinctio beatae autem pariatur totam accusamus repellat consequuntur incidunt quidem blanditiis debitis. Ullam, necessitatibus, illum! Culpa, veniam. Sed, enim magnam aspernatur, laudantium, sit dicta officia harum nihil natus aliquid fugiat a neque. Quibusdam aspernatur, eligendi ipsum dolorem harum! Voluptas veritatis tempore at! Vitae reiciendis consequuntur alias, mollitia dolorum iure at autem cupiditate obcaecati saepe quos eos? Id omnis fuga ducimus, molestias optio asperiores.</p>
+        </section>
+    </div>
+</body>
+
+</html>
