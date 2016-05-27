@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Clear fix</title>
+        <style>
+            .my-box {
+                border: 1px solid teal;
+            }
+            #ilta-image {
+                float: right;
+                margin: 1em;
+            }
+            .clearfix {
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="my-box clearfix">
+            <img id="ilta-image" src="images/ilta.png" alt="Ilta the Guinea Pig">
+            <h2>The image is overflowing out of the container.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, debitis.</p>
+        </div>
+    </body>
+</html>
